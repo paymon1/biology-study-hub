@@ -4,4 +4,9 @@
 
 قالب پیشنهادی: [LESSON_TEMPLATE.md](../LESSON_TEMPLATE.md)
 
-پوشه‌های پیشنهادی: `grade-10/`, `grade-11/`, `grade-12/`.
+## زیست‌شناسی دهم
+
+- [فصل ۱ — دنیای زنده](grade-10/chapter-01/lesson.md)
+- [فصل ۲ — گوارش و جذب مواد](grade-10/chapter-02/lesson.md)
+
+پوشه‌های پیشنهادی: grade-10/, grade-11/, grade-12/.
