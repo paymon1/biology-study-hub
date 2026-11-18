@@ -15,6 +15,7 @@
     **فصل‌های آمادهٔ مطالعه:**
     - [فصل ۱: دنیای زنده](02-lesson-notes/grade-10/chapter-01/lesson.md)
     - [فصل ۲: گوارش و جذب مواد](02-lesson-notes/grade-10/chapter-02/lesson.md)
+    - [فصل ۳: تبادلات گازی](02-lesson-notes/grade-10/chapter-03/lesson.md)
 
 -   :material-book-open-variant: **پایهٔ یازدهم**
 
