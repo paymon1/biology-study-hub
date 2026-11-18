@@ -12,3 +12,4 @@
 - [فصل ۴ — گردش مواد در بدن](grade-10/chapter-04/lesson.md)
 
 پوشه‌های پیشنهادی: grade-10/, grade-11/, grade-12/.
+- [فصل ۵ — تنظیم اسمزی و دفع مواد زائد](grade-10/chapter-05/lesson.md)
