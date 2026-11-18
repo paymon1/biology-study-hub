@@ -1,0 +1,66 @@
+site_name: زیست‌یار | پایگاه آموزش زیست‌شناسی
+site_description: درس‌نامه، یادگیری دیداری، تمرین و فلش‌کارت زیست‌شناسی دهم، یازدهم و دوازدهم
+site_url: https://paymon1.github.io/biology-study-hub/
+site_author: Biology Study Hub
+copyright: محتوای تألیفی آموزشی؛ برای منابع بیرونی به ارجاع هر صفحه مراجعه کنید.
+
+docs_dir: site_docs
+site_dir: site
+
+theme:
+  name: material
+  language: fa
+  direction: rtl
+  icon:
+    logo: material/dna
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  font: false
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+nav:
+  - خانه: index.md
+  - پایه دهم:
+      - معرفی کتاب: 01-curriculum/grade-10.md
+      - فصل ۱ — دنیای زنده:
+          - درس‌نامه: 02-lesson-notes/grade-10/chapter-01/lesson.md
+          - راهنمای دیداری: 03-visual-learning/grade-10/chapter-01/visual-guide.md
+          - تمرین: 04-practice-questions/grade-10/chapter-01/practice.md
+          - فلش‌کارت: 06-flashcards/grade-10/chapter-01/flashcards.md
+      - فصل ۲ — گوارش و جذب مواد:
+          - درس‌نامه: 02-lesson-notes/grade-10/chapter-02/lesson.md
+          - راهنمای دیداری: 03-visual-learning/grade-10/chapter-02/visual-guide.md
+          - تمرین: 04-practice-questions/grade-10/chapter-02/practice.md
+          - فلش‌کارت: 06-flashcards/grade-10/chapter-02/flashcards.md
+  - پایه یازدهم:
+      - معرفی کتاب: 01-curriculum/grade-11.md
+  - پایه دوازدهم:
+      - معرفی کتاب: 01-curriculum/grade-12.md
+  - درباره پروژه: about.md
