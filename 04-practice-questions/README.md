@@ -7,3 +7,9 @@
 قالب پیشنهادی: [QUESTION_TEMPLATE.md](../QUESTION_TEMPLATE.md)
 
 پوشه‌های پیشنهادی: `chapter-based/`, `mixed-topic/`, `school-exams/`, `konkur-practice/`.
+
+## مجموعه‌های آماده
+
+- [فصل ۱ زیست دهم — دنیای زنده](grade-10/chapter-01/practice.md)
+- [فصل ۲ زیست دهم — گوارش و جذب مواد](grade-10/chapter-02/practice.md)
+- [فصل ۳ زیست دهم — تبادلات گازی](grade-10/chapter-03/practice.md)
