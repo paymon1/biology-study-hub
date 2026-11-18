@@ -12,3 +12,4 @@
 - [فصل ۴ زیست دهم — گردش مواد در بدن](grade-10/chapter-04/flashcards.md)
 - [فصل ۵ زیست دهم — تنظیم اسمزی و دفع مواد زائد](grade-10/chapter-05/flashcards.md)
 - [فصل ۶ زیست دهم — از یاخته تا گیاه](grade-10/chapter-06/flashcards.md)
+- [فصل ۷ زیست دهم — جذب و انتقال مواد در گیاهان](grade-10/chapter-07/flashcards.md)
