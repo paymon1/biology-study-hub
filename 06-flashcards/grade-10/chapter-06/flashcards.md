@@ -38,14 +38,14 @@
 کانال سیتوپلاسمی بین یاخته‌های مجاور که عبور مواد را ممکن می‌کند.
 
 </details>
-<details class="flashcard"><summary>لانه چیست؟</summary>
+<details class="flashcard"><summary>لان چیست؟</summary>
 
 ناحیه‌ای از دیوارهٔ یاخته‌ای که نازک باقی مانده است.
 
 </details>
-<details class="flashcard"><summary>تفاوت لانه و پلاسمودسم چیست؟</summary>
+<details class="flashcard"><summary>تفاوت لان و پلاسمودسم چیست؟</summary>
 
-لانه ناحیهٔ نازک دیواره است؛ پلاسمودسم کانال سیتوپلاسمی است.
+لان ناحیهٔ نازک دیواره است؛ پلاسمودسم کانال سیتوپلاسمی است.
 
 </details>
 
