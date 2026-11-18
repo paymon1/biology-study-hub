@@ -16,3 +16,4 @@
 - [فصل ۴ زیست دهم — گردش مواد در بدن](grade-10/chapter-04/practice.md)
 - [فصل ۵ زیست دهم — تنظیم اسمزی و دفع مواد زائد](grade-10/chapter-05/practice.md)
 - [فصل ۶ زیست دهم — از یاخته تا گیاه](grade-10/chapter-06/practice.md)
+- [فصل ۷ زیست دهم — جذب و انتقال مواد در گیاهان](grade-10/chapter-07/practice.md)
