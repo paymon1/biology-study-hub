@@ -534,7 +534,7 @@
 <details class="flashcard">
 <summary>مسیر کلی خون در ماهی چیست؟</summary>
 
-قلب ← آبشش ← اندام‌ها ← قلب.
+قلب → آبشش → اندام‌ها → قلب.
 
 </details>
 
