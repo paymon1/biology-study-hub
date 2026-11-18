@@ -38,14 +38,14 @@
 کانال سیتوپلاسمی بین یاخته‌های مجاور که عبور مواد را ممکن می‌کند.
 
 </details>
-<details class="flashcard"><summary>الن چیست؟</summary>
+<details class="flashcard"><summary>لانه چیست؟</summary>
 
 ناحیه‌ای از دیوارهٔ یاخته‌ای که نازک باقی مانده است.
 
 </details>
-<details class="flashcard"><summary>تفاوت الن و پلاسمودسم چیست؟</summary>
+<details class="flashcard"><summary>تفاوت لانه و پلاسمودسم چیست؟</summary>
 
-الن ناحیهٔ نازک دیواره است؛ پلاسمودسم کانال سیتوپلاسمی است.
+لانه ناحیهٔ نازک دیواره است؛ پلاسمودسم کانال سیتوپلاسمی است.
 
 </details>
 
@@ -60,7 +60,7 @@
 با ورود آب، پروتوپلاست حجیم می‌شود و به دیواره فشار می‌آورد.
 
 </details>
-<details class="flashcard"><summary>پالسمولیز چیست؟</summary>
+<details class="flashcard"><summary>پلاسمولیز چیست؟</summary>
 
 با خروج آب، پروتوپلاست جمع می‌شود و از دیواره فاصله می‌گیرد.
 
