@@ -12,5 +12,6 @@
 - [فصل ۴ — گردش مواد در بدن](grade-10/chapter-04/lesson.md)
 - [فصل ۵ — تنظیم اسمزی و دفع مواد زائد](grade-10/chapter-05/lesson.md)
 - [فصل ۶ — از یاخته تا گیاه](grade-10/chapter-06/lesson.md)
+- [فصل ۷ — جذب و انتقال مواد در گیاهان](grade-10/chapter-07/lesson.md)
 
 پوشه‌های پیشنهادی: grade-10/, grade-11/, grade-12/.
