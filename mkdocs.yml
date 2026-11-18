@@ -18,9 +18,25 @@ theme:
     - navigation.sections
     - navigation.top
     - navigation.indexes
+    - navigation.tracking
     - search.suggest
     - search.highlight
     - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: تغییر به حالت تاریک
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: تغییر به حالت روشن
   font: false
 
 plugins:
