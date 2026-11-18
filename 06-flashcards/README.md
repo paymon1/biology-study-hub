@@ -10,3 +10,4 @@
 - [فصل ۲ زیست دهم — گوارش و جذب مواد](grade-10/chapter-02/flashcards.md)
 - [فصل ۳ زیست دهم — تبادلات گازی](grade-10/chapter-03/flashcards.md)
 - [فصل ۴ زیست دهم — گردش مواد در بدن](grade-10/chapter-04/flashcards.md)
+- [فصل ۵ زیست دهم — تنظیم اسمزی و دفع مواد زائد](grade-10/chapter-05/flashcards.md)
