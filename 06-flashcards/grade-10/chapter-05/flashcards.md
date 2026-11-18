@@ -45,7 +45,7 @@
 </details>
 <details class="flashcard"><summary>ترتیب بخش‌های لوله‌ای نفرون چیست؟</summary>
 
-پیچ‌خوردهٔ نزدیک ← قوس هنله ← پیچ‌خوردهٔ دور.
+پیچ‌خوردهٔ نزدیک → قوس هنله → پیچ‌خوردهٔ دور.
 
 </details>
 <details class="flashcard"><summary>ویژگی قوس هنله در نفرون قشری؟</summary>
@@ -141,7 +141,7 @@
 </details>
 <details class="flashcard"><summary>ترتیب مسیر ادرار پس از مجرای جمع‌کننده؟</summary>
 
-لگنچه ← میزنای ← مثانه ← میزراه.
+لگنچه → میزنای → مثانه → میزراه.
 
 </details>
 <details class="flashcard"><summary>مثانه چه وظیفه‌ای دارد؟</summary>
