@@ -10,6 +10,7 @@
 - [فصل ۲ — گوارش و جذب مواد](grade-10/chapter-02/lesson.md)
 - [فصل ۳ — تبادلات گازی](grade-10/chapter-03/lesson.md)
 - [فصل ۴ — گردش مواد در بدن](grade-10/chapter-04/lesson.md)
+- [فصل ۵ — تنظیم اسمزی و دفع مواد زائد](grade-10/chapter-05/lesson.md)
+- [فصل ۶ — از یاخته تا گیاه](grade-10/chapter-06/lesson.md)
 
 پوشه‌های پیشنهادی: grade-10/, grade-11/, grade-12/.
-- [فصل ۵ — تنظیم اسمزی و دفع مواد زائد](grade-10/chapter-05/lesson.md)
