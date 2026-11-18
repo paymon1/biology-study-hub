@@ -52,3 +52,56 @@ body,
     font-size: 0.88rem;
   }
 }
+
+
+/* Interactive flashcards: the question is the front; tap to reveal the answer. */
+.md-typeset details.flashcard {
+  margin: 0.8rem 0;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.75rem;
+  background: var(--md-code-bg-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.045);
+  overflow: hidden;
+}
+
+.md-typeset details.flashcard > summary {
+  padding: 0.9rem 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  min-height: 3.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.md-typeset details.flashcard > summary::-webkit-details-marker {
+  display: none;
+}
+
+.md-typeset details.flashcard > summary::before {
+  content: "؟";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 1.65rem;
+  height: 1.65rem;
+  border-radius: 50%;
+  background: var(--md-primary-fg-color);
+  color: white;
+  font-size: 0.85rem;
+}
+
+.md-typeset details.flashcard[open] > summary {
+  border-bottom: 1px dashed var(--md-default-fg-color--lighter);
+}
+
+.md-typeset details.flashcard[open] > summary::before {
+  content: "✓";
+}
+
+.md-typeset details.flashcard > p {
+  padding: 0.8rem 1.1rem;
+  margin: 0;
+  background: var(--md-default-bg-color);
+}
