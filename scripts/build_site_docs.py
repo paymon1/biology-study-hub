@@ -49,6 +49,9 @@ def main():
     assets = DEST / "assets" / "stylesheets"
     assets.mkdir(parents=True, exist_ok=True)
     copy2(ROOT / "website" / "extra.css", assets / "extra.css")
+    scripts = DEST / "assets" / "javascripts"
+    scripts.mkdir(parents=True, exist_ok=True)
+    copy2(ROOT / "website" / "flashcards.js", scripts / "flashcards.js")
     copy2(ROOT / "website" / "index.md", DEST / "index.md")
     copy2(ROOT / "website" / "about.md", DEST / "about.md")
 
