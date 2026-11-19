@@ -1,0 +1,32 @@
+# فلش‌کارت‌های فصل ششم: تقسیم یاخته
+
+<details class="flashcard"><summary>فام‌تن از چه موادی ساخته شده است؟</summary>دنا و پروتئین‌ها، از جمله هیستون‌ها.</details>
+<details class="flashcard"><summary>فامینک خواهری چیست؟</summary>یکی از دو نسخهٔ همانند یک فام‌تن مضاعف.</details>
+<details class="flashcard"><summary>فام‌تن‌های همتا چه ویژگی‌ای دارند؟</summary>ژن‌های متناظر در جایگاه‌های مشابه دارند؛ یکی معمولاً مادری و دیگری پدری است.</details>
+<details class="flashcard"><summary>آیا فام‌تن‌های همتا الزاماً دگره‌های یکسان دارند؟</summary>خیر؛ ممکن است دگره‌های متفاوتی داشته باشند.</details>
+<details class="flashcard"><summary>سانترومر چیست؟</summary>ناحیهٔ اتصال فامینک‌های خواهری و محل شکل‌گیری کینه‌توکور.</details>
+<details class="flashcard"><summary>عدد فام‌تنی n چه چیزی را نشان می‌دهد؟</summary>تعداد مجموعه‌های فام‌تنی.</details>
+<details class="flashcard"><summary>همانندسازی دنا در کدام مرحله رخ می‌دهد؟</summary>مرحلهٔ S اینترفاز.</details>
+<details class="flashcard"><summary>آیا پس از مرحلهٔ S تعداد فام‌تن‌ها دو برابر می‌شود؟</summary>خیر؛ هر فام‌تن دو فامینک خواهری دارد، اما تعداد فام‌تن ثابت می‌ماند.</details>
+<details class="flashcard"><summary>مراحل اصلی چرخهٔ یاخته‌ای چیست؟</summary>G1، S، G2 و مرحلهٔ M.</details>
+<details class="flashcard"><summary>در G1 چه رخ می‌دهد؟</summary>رشد یاخته و ساخت مواد و اندامک‌ها.</details>
+<details class="flashcard"><summary>در G2 چه رخ می‌دهد؟</summary>رشد بیشتر و آماده‌سازی برای تقسیم.</details>
+<details class="flashcard"><summary>در متافاز میتوز فام‌تن‌ها کجا قرار می‌گیرند؟</summary>در صفحهٔ استوایی یاخته.</details>
+<details class="flashcard"><summary>در آنافاز میتوز چه جدا می‌شود؟</summary>فامینک‌های خواهری.</details>
+<details class="flashcard"><summary>در یاختهٔ جانوری شیار تقسیم چگونه ایجاد می‌شود؟</summary>با حلقهٔ انقباضی رشته‌های اکتین و میوزین.</details>
+<details class="flashcard"><summary>در یاختهٔ گیاهی صفحهٔ یاخته‌ای چگونه ایجاد می‌شود؟</summary>با پیوستن ریزکیسه‌ها در مرکز یاخته و گسترش صفحه به سوی پیرامون.</details>
+<details class="flashcard"><summary>میتوز معمولاً چند هسته ایجاد می‌کند؟</summary>دو هسته با عدد فام‌تنی برابر با هستهٔ آغازین.</details>
+<details class="flashcard"><summary>G0 چیست؟</summary>وضعیتی بیرون از چرخهٔ فعال تقسیم؛ یاخته ممکن است همچنان فعالیت تخصصی داشته باشد.</details>
+<details class="flashcard"><summary>هدف اصلی میوز چیست؟</summary>کاهش عدد فام‌تنی در مسیر تشکیل یاخته‌های جنسی و کمک به تنوع ژنتیکی.</details>
+<details class="flashcard"><summary>در میوز چند بار همانندسازی دنا رخ می‌دهد؟</summary>یک بار، پیش از میوز I.</details>
+<details class="flashcard"><summary>در میوز I چه چیزی از هم جدا می‌شود؟</summary>فام‌تن‌های همتا.</details>
+<details class="flashcard"><summary>در میوز II چه چیزی از هم جدا می‌شود؟</summary>فامینک‌های خواهری.</details>
+<details class="flashcard"><summary>کراسینگ‌اور در کدام مرحله رخ می‌دهد؟</summary>پروفاز I.</details>
+<details class="flashcard"><summary>کراسینگ‌اور میان کدام فامینک‌هاست؟</summary>فامینک‌های غیرخواهری فام‌تن‌های همتا.</details>
+<details class="flashcard"><summary>در متافاز I چه چیزی در صفحهٔ استوایی آرایش می‌یابد؟</summary>جفت‌های فام‌تن همتا.</details>
+<details class="flashcard"><summary>آرایش مستقل فام‌تن‌ها چه اثری دارد؟</summary>ترکیب‌های متفاوتی از فام‌تن‌های مادری و پدری را در یاخته‌های حاصل ایجاد می‌کند.</details>
+<details class="flashcard"><summary>پیش از میوز II آیا دنا دوباره همانندسازی می‌کند؟</summary>خیر.</details>
+<details class="flashcard"><summary>میوز معمولاً چند یاختهٔ هاپلوئید ایجاد می‌کند؟</summary>چهار یاخته.</details>
+<details class="flashcard"><summary>عدم جدایی چیست؟</summary>جدا نشدن درست فام‌تن‌های همتا یا فامینک‌های خواهری در میوز.</details>
+<details class="flashcard"><summary>دو تفاوت اصلی میتوز و میوز چیست؟</summary>میتوز یک تقسیم و حفظ عدد فام‌تنی دارد؛ میوز دو تقسیم و کاهش عدد فام‌تنی دارد.</details>
+<details class="flashcard"><summary>دو منبع تنوع ژنتیکی در میوز کدام‌اند؟</summary>کراسینگ‌اور و آرایش/جدایی مستقل فام‌تن‌های همتا.</details>
