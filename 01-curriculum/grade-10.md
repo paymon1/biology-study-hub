@@ -3,26 +3,45 @@
 > **رشته:** علوم تجربی · **کد کتاب:** ۱۱۰۲۱۶ · **مرجع نسخهٔ جاری:** پایگاه رسمی کتاب‌های درسی  
 > **وضعیت تطبیق:** فهرست فصل‌ها بر پایهٔ نسخه‌های قابل بررسی کتاب زیست‌شناسی (۱) تنظیم شده است. پیش از افزودن شماره صفحه یا ارجاع دقیق، سال چاپ و فهرست نسخهٔ همان سال را در [chap.sch.ir](https://chap.sch.ir/) کنترل کنید.
 
-## فصل‌ها
+## محتوای آمادهٔ مطالعه
 
-| شناسه | عنوان فصل | محور کلی |
-|---|---|---|
-| 10-01 | دنیای زنده | چیستی زیست‌شناسی، گسترهٔ حیات، یاخته و بافت |
-| 10-02 | گوارش و جذب مواد | ساختار و عملکرد لولهٔ گوارش، جذب، تنوع گوارش |
-| 10-03 | تبادلات گازی | تنفس در انسان، تهویهٔ ششی، تنوع تبادلات گازی |
-| 10-04 | گردش مواد در بدن | قلب، رگ‌ها، خون، گردش مواد در جانداران |
-| 10-05 | تنظیم اسمزی و دفع مواد زائد | هم‌ایستایی، کلیه‌ها، تشکیل ادرار، دفع در جانداران |
-| 10-06 | از یاخته تا گیاه | یاخته‌های گیاهی، سامانه‌های بافتی، ساختار گیاه |
-| 10-07 | جذب و انتقال مواد در گیاهان | تغذیهٔ گیاهی، همزیست‌ها و انتقال مواد |
+برای دسترسی سریع، محتوای هر فصل را همین‌جا انتخاب کن:
 
-## سازمان‌دهی محتوای پروژه
+<div class="grid cards zy-chapters" markdown>
 
-برای هر فصل، در بخش‌های دیگر مخزن از شناسهٔ ثابت زیر استفاده کنید:
+-   **فصل ۱ · دنیای زنده**
 
-- درس‌نامه: `02-lesson-notes/grade-10/chapter-XX/`
-- تمرین: `04-practice-questions/grade-10/chapter-XX/`
-- فلش‌کارت: `06-flashcards/grade-10/chapter-XX/`
-- مرور: `07-revision/grade-10/chapter-XX/`
+    [درس‌نامه](../02-lesson-notes/grade-10/chapter-01/lesson.md) · [راهنمای دیداری](../03-visual-learning/grade-10/chapter-01/visual-guide.md) · [تمرین](../04-practice-questions/grade-10/chapter-01/practice.md) · [فلش‌کارت](../06-flashcards/grade-10/chapter-01/flashcards.md)
+
+-   **فصل ۲ · گوارش و جذب مواد**
+
+    [درس‌نامه](../02-lesson-notes/grade-10/chapter-02/lesson.md) · [راهنمای دیداری](../03-visual-learning/grade-10/chapter-02/visual-guide.md) · [تمرین](../04-practice-questions/grade-10/chapter-02/practice.md) · [فلش‌کارت](../06-flashcards/grade-10/chapter-02/flashcards.md)
+
+-   **فصل ۳ · تبادلات گازی**
+
+    [درس‌نامه](../02-lesson-notes/grade-10/chapter-03/lesson.md) · [راهنمای دیداری](../03-visual-learning/grade-10/chapter-03/visual-guide.md) · [تمرین](../04-practice-questions/grade-10/chapter-03/practice.md) · [فلش‌کارت](../06-flashcards/grade-10/chapter-03/flashcards.md)
+
+-   **فصل ۴ · گردش مواد در بدن**
+
+    [درس‌نامه](../02-lesson-notes/grade-10/chapter-04/lesson.md) · [راهنمای دیداری](../03-visual-learning/grade-10/chapter-04/visual-guide.md) · [تمرین](../04-practice-questions/grade-10/chapter-04/practice.md) · [فلش‌کارت](../06-flashcards/grade-10/chapter-04/flashcards.md)
+
+-   **فصل ۵ · تنظیم اسمزی و دفع مواد زائد**
+
+    [درس‌نامه](../02-lesson-notes/grade-10/chapter-05/lesson.md) · [راهنمای دیداری](../03-visual-learning/grade-10/chapter-05/visual-guide.md) · [تمرین](../04-practice-questions/grade-10/chapter-05/practice.md) · [فلش‌کارت](../06-flashcards/grade-10/chapter-05/flashcards.md)
+
+-   **فصل ۶ · از یاخته تا گیاه**
+
+    [درس‌نامه](../02-lesson-notes/grade-10/chapter-06/lesson.md) · [راهنمای دیداری](../03-visual-learning/grade-10/chapter-06/visual-guide.md) · [تمرین](../04-practice-questions/grade-10/chapter-06/practice.md) · [فلش‌کارت](../06-flashcards/grade-10/chapter-06/flashcards.md)
+
+-   **فصل ۷ · جذب و انتقال مواد در گیاهان**
+
+    [درس‌نامه](../02-lesson-notes/grade-10/chapter-07/lesson.md) · [راهنمای دیداری](../03-visual-learning/grade-10/chapter-07/visual-guide.md) · [تمرین](../04-practice-questions/grade-10/chapter-07/practice.md) · [فلش‌کارت](../06-flashcards/grade-10/chapter-07/flashcards.md)
+
+</div>
+
+## ساختار محتوای هر فصل
+
+هر فصل چهار مسیر مطالعه دارد: درس‌نامه برای یادگیری مفهومی، راهنمای دیداری برای شکل‌ها و فرایندها، تمرین برای سنجش یادگیری و فلش‌کارت برای مرور فعال.
 
 ## منابع و راستی‌آزمایی
 
