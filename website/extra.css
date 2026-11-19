@@ -81,3 +81,15 @@ background: radial-gradient(circle at 10% 15%, rgba(255,255,255,.17), transparen
 .zy-lower-grid { grid-template-columns: 1fr; }
 .zy-tools { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
+
+
+/* Sequential saved-card review */
+.zy-review-current { padding: 1.1rem; }
+.zy-review-progress { margin: .8rem 0 .35rem; color: var(--md-default-fg-color--light); font-size: .8rem; font-weight: 800; }
+.zy-review-question { font-size: 1.15rem !important; line-height: 1.8; }
+.zy-review-reveal, .zy-review-nav { border: 1px solid var(--md-primary-fg-color); border-radius: 999px; padding: .45rem .9rem; color: var(--md-primary-fg-color); background: var(--md-default-bg-color); font: inherit; font-size: .8rem; font-weight: 700; cursor: pointer; }
+.zy-review-answer[hidden] { display: none; }
+.zy-review-current .zy-review-answer { margin-top: .8rem; padding: .8rem; line-height: 1.9; }
+.zy-review-nav:disabled { opacity: .4; cursor: not-allowed; }
+.zy-review-current .zy-review-actions { justify-content: space-between; }
+.md-typeset .admonition.success { margin: .5rem 0 1rem; font-size: .9rem; }
