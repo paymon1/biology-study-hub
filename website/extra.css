@@ -56,6 +56,21 @@ background: radial-gradient(circle at 10% 15%, rgba(255,255,255,.17), transparen
 .md-typeset details.flashcard[open] > summary { border-bottom: 1px dashed var(--md-default-fg-color--lighter); }
 .md-typeset details.flashcard[open] > summary::before { content: "✓"; }
 .md-typeset details.flashcard > p { padding: .8rem 1.1rem; margin: 0; background: var(--md-default-bg-color); }
+.zy-flashcard-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem; margin: 1rem 0; padding: .75rem .9rem; border: 1px solid var(--md-default-fg-color--lightest); border-radius: .8rem; background: var(--md-code-bg-color); }
+.zy-flashcard-count { flex: 1 1 100%; color: var(--md-default-fg-color--light); font-size: .78rem; }
+.zy-flashcard-filter, .zy-card-save, .zy-card-remove { border: 1px solid var(--md-primary-fg-color); border-radius: 999px; padding: .38rem .8rem; color: var(--md-primary-fg-color); background: var(--md-default-bg-color); font: inherit; font-size: .76rem; font-weight: 700; cursor: pointer; }
+.zy-flashcard-filter.is-active, .zy-card-save.is-saved { color: #fff; background: var(--md-primary-fg-color); }
+.zy-flashcard-review-link { font-size: .76rem; font-weight: 700; }
+.md-typeset details.flashcard > .zy-card-save { display: block; margin: .55rem 1rem .8rem auto; }
+.md-typeset details.flashcard[hidden] { display: none; }
+.zy-review-card { margin: .8rem 0; padding: .9rem 1rem; border: 1px solid var(--md-default-fg-color--lightest); border-radius: .8rem; background: var(--md-code-bg-color); }
+.zy-review-card h3 { margin: 0 0 .3rem; font-size: 1rem; }
+.zy-review-card p { margin: .35rem 0; }
+.zy-review-chapter { color: var(--md-default-fg-color--light); font-size: .75rem; }
+.zy-review-answer { padding: .55rem .7rem; border-radius: .5rem; background: var(--md-default-bg-color); }
+.zy-review-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem; margin-top: .6rem; font-size: .78rem; }
+.zy-card-remove { border-color: var(--md-default-fg-color--lighter); color: var(--md-default-fg-color); }
+.zy-review-count { font-weight: 800; }
 @media(max-width: 850px) { .zy-chapters > ul { grid-template-columns: repeat(2,minmax(0,1fr)) !important; } }
 @media(max-width: 600px) {
 .md-typeset { font-size: .88rem; }
