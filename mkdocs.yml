@@ -60,9 +60,12 @@ markdown_extensions:
 
 extra_css:
   - assets/stylesheets/extra.css
+extra_javascript:
+  - assets/javascripts/flashcards.js
 
 nav:
   - خانه: index.md
+  - کارت‌های نشان‌دار: 07-revision/saved-flashcards.md
   - پایه دهم:
       - معرفی کتاب: 01-curriculum/grade-10.md
       - فصل ۱ — دنیای زنده:
