@@ -83,39 +83,57 @@
   function initReviewPage() {
     const root = document.getElementById("zy-saved-review");
     if (!root) return;
+    let currentIndex = 0;
+    let answerVisible = false;
+
     const render = () => {
       root.replaceChildren();
-      const saved = readSaved();
-      const entries = Object.entries(saved);
+      const entries = Object.entries(readSaved());
       const heading = make("p", "zy-review-count", entries.length
         ? entries.length + " کارت برای مرور ذخیره کرده‌ای."
         : "هنوز کارتی برای مرور نشان نکرده‌ای.");
       root.appendChild(heading);
       if (!entries.length) {
-        const hint = make("p", "zy-review-empty", "به صفحهٔ فلش‌کارت هر فصل برو و دکمهٔ «نگه‌داشتن برای مرور» را بزن.");
-        root.appendChild(hint);
+        root.appendChild(make("p", "zy-review-empty", "به صفحهٔ فلش‌کارت هر فصل برو و دکمهٔ «نگه‌داشتن برای مرور» را بزن."));
         return;
       }
-      entries.forEach(([key, item]) => {
-        const article = make("article", "zy-review-card");
-        const title = make("h3", "", item.question || "فلش‌کارت");
-        const answer = make("p", "zy-review-answer", item.answer || "");
-        const chapter = make("p", "zy-review-chapter", item.chapter || "");
-        const actions = make("div", "zy-review-actions");
-        const link = make("a", "", "رفتن به کارت");
-        link.href = item.url || key;
-        const remove = make("button", "zy-card-remove", "حذف از مرور");
-        remove.type = "button";
-        remove.addEventListener("click", () => {
-          const current = readSaved();
-          delete current[key];
-          writeSaved(current);
-          render();
-        });
-        actions.append(link, remove);
-        article.append(title, chapter, answer, actions);
-        root.appendChild(article);
+
+      currentIndex = Math.min(Math.max(currentIndex, 0), entries.length - 1);
+      const [key, item] = entries[currentIndex];
+      const progress = make("p", "zy-review-progress", "کارت " + (currentIndex + 1) + " از " + entries.length);
+      const article = make("article", "zy-review-card zy-review-current");
+      const chapter = make("p", "zy-review-chapter", item.chapter || "");
+      const title = make("h3", "zy-review-question", item.question || "فلش‌کارت");
+      const answer = make("p", "zy-review-answer", item.answer || "");
+      answer.hidden = !answerVisible;
+      const reveal = make("button", "zy-review-reveal", answerVisible ? "پنهان‌کردن پاسخ" : "نمایش پاسخ");
+      reveal.type = "button";
+      reveal.setAttribute("aria-expanded", String(answerVisible));
+      reveal.addEventListener("click", () => { answerVisible = !answerVisible; render(); });
+
+      const actions = make("div", "zy-review-actions");
+      const previous = make("button", "zy-review-nav", "کارت قبلی");
+      previous.type = "button";
+      previous.disabled = currentIndex === 0;
+      previous.addEventListener("click", () => { currentIndex--; answerVisible = false; render(); });
+      const next = make("button", "zy-review-nav", "کارت بعدی");
+      next.type = "button";
+      next.disabled = currentIndex === entries.length - 1;
+      next.addEventListener("click", () => { currentIndex++; answerVisible = false; render(); });
+      const link = make("a", "", "رفتن به صفحهٔ اصلی کارت");
+      link.href = item.url || key;
+      const remove = make("button", "zy-card-remove", "حذف از مرور");
+      remove.type = "button";
+      remove.addEventListener("click", () => {
+        const current = readSaved();
+        delete current[key];
+        writeSaved(current);
+        answerVisible = false;
+        render();
       });
+      actions.append(previous, next, link, remove);
+      article.append(chapter, title, reveal, answer, actions);
+      root.append(progress, article);
     };
     render();
   }
