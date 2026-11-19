@@ -50,8 +50,13 @@
 
     cards.forEach((card, index) => {
       const question = card.querySelector("summary")?.innerText.trim() || ("کارت " + (index + 1));
-      const answerNode = Array.from(card.children).find(node => node.tagName === "P");
-      const answer = answerNode?.innerText.trim() || "";
+      const answer = Array.from(card.querySelectorAll("p"))
+        .map(node => node.innerText.trim())
+        .filter(Boolean)
+        .join("\n\n") || Array.from(card.childNodes)
+          .filter(node => node.nodeType === Node.TEXT_NODE)
+          .map(node => node.textContent.trim())
+          .filter(Boolean).join("\n\n");
       const cardId = "zy-flashcard-" + String(index + 1).padStart(2, "0");
       card.id = cardId;
       card.dataset.saveKey = location.pathname + "#" + cardId;
@@ -85,6 +90,7 @@
     if (!root) return;
     let currentIndex = 0;
     let answerVisible = false;
+    const hydrationStarted = new Set();
 
     const render = () => {
       root.replaceChildren();
@@ -100,6 +106,32 @@
 
       currentIndex = Math.min(Math.max(currentIndex, 0), entries.length - 1);
       const [key, item] = entries[currentIndex];
+      // Repair older saved entries whose answer was not captured by the earlier script.
+      if (!item.answer && item.url && !hydrationStarted.has(key)) {
+        hydrationStarted.add(key);
+        const pageUrl = item.url.split("#")[0];
+        const cardId = item.url.split("#")[1];
+        fetch(pageUrl)
+          .then(response => response.ok ? response.text() : Promise.reject())
+          .then(html => {
+            const doc = new DOMParser().parseFromString(html, "text/html");
+            const sourceCard = doc.getElementById(cardId);
+            if (!sourceCard) return;
+            const recovered = Array.from(sourceCard.querySelectorAll("p"))
+              .map(node => node.textContent.trim()).filter(Boolean).join("\\n\\n")
+              || Array.from(sourceCard.childNodes)
+                .filter(node => node.nodeType === Node.TEXT_NODE)
+                .map(node => node.textContent.trim()).filter(Boolean).join("\\n\\n");
+            if (!recovered) return;
+            const latest = readSaved();
+            if (latest[key] && !latest[key].answer) {
+              latest[key].answer = recovered;
+              writeSaved(latest);
+              if (currentIndex < Object.keys(latest).length) render();
+            }
+          })
+          .catch(() => {});
+      }
       const progress = make("p", "zy-review-progress", "کارت " + (currentIndex + 1) + " از " + entries.length);
       const article = make("article", "zy-review-card zy-review-current");
       const chapter = make("p", "zy-review-chapter", item.chapter || "");
