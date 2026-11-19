@@ -115,13 +115,18 @@
           .then(response => response.ok ? response.text() : Promise.reject())
           .then(html => {
             const doc = new DOMParser().parseFromString(html, "text/html");
-            const sourceCard = doc.getElementById(cardId);
+            // Card IDs are assigned by JavaScript after page load, so they
+            // are not present in fetched source HTML. Resolve the card by its
+            // stable sequence number instead.
+            const match = /^zy-flashcard-(\\d+)$/.exec(cardId || "");
+            const cardIndex = match ? Number(match[1]) - 1 : -1;
+            const sourceCard = doc.querySelectorAll("details.flashcard")[cardIndex];
             if (!sourceCard) return;
-            const recovered = Array.from(sourceCard.querySelectorAll("p"))
-              .map(node => node.textContent.trim()).filter(Boolean).join("\\n\\n")
-              || Array.from(sourceCard.childNodes)
-                .filter(node => node.nodeType === Node.TEXT_NODE)
-                .map(node => node.textContent.trim()).filter(Boolean).join("\\n\\n");
+            const answerParts = Array.from(sourceCard.children)
+              .filter(node => node.tagName !== "SUMMARY" && !node.matches(".zy-card-save"))
+              .map(node => node.innerText || node.textContent || "")
+              .map(value => value.trim()).filter(Boolean);
+            const recovered = answerParts.join("\\n\\n");
             if (!recovered) return;
             const latest = readSaved();
             if (latest[key] && !latest[key].answer) {
