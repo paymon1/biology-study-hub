@@ -224,6 +224,8 @@
 <div class="zy-grades" markdown>
 ## ابزارهای مرور
 
+[میز مطالعهٔ من · پیشرفت، برنامه و دفترچه](07-revision/study-dashboard.md)
+
 [فلش‌کارت‌های نشان‌دار](07-revision/saved-flashcards.md)
 
 [راهنمای شروع و روش مطالعه](00-study-guides/)
