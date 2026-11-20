@@ -64,33 +64,45 @@
     floatingHighlight=$("button","zy-floating-highlight","🖍 ذخیره هایلایت");
     floatingHighlight.type="button";
     floatingHighlight.setAttribute("aria-label","ذخیره متن انتخاب‌شده در دفترچه");
-    // Prevent the browser from clearing the text selection before the click handler runs.
+    // Keep the browser's selection alive when the floating action is tapped (especially on phones).
+    floatingHighlight.addEventListener("pointerdown",e=>e.preventDefault());
     floatingHighlight.addEventListener("mousedown",e=>e.preventDefault());
-    floatingHighlight.addEventListener("touchstart",e=>e.stopPropagation(),{passive:true});
     floatingHighlight.addEventListener("click",()=> {
       if(pendingRange && pendingSection) saveSelection(pendingSection,pendingRange);
-      hideFloatingHighlight();
+      floatingHighlight.style.display="none";
     });
     document.body.append(floatingHighlight);
-    document.addEventListener("selectionchange",()=> {
+
+    const updateFromSelection=()=> {
       const selection=window.getSelection();
-      if(!selection || selection.isCollapsed || !selection.rangeCount){hideFloatingHighlight();return;}
+      if(!selection || selection.isCollapsed || !selection.rangeCount){
+        if(floatingHighlight)floatingHighlight.style.display="none";
+        return;
+      }
       const range=selection.getRangeAt(0);
-      const root=document.querySelector(".md-content article")||document.querySelector("article")||document.querySelector("main");
-      if(!root || !root.contains(range.commonAncestorContainer) || !selection.toString().trim()){hideFloatingHighlight();return;}
+      const root=document.querySelector(".md-content")||document.querySelector("article")||document.querySelector("main");
+      if(!root || !root.contains(range.commonAncestorContainer) || !selection.toString().trim()){
+        floatingHighlight.style.display="none";
+        pendingRange=null;pendingSection=null;
+        return;
+      }
       pendingRange=range.cloneRange();pendingSection=section;
       positionFloatingHighlight();
-    });
+    };
+    document.addEventListener("selectionchange",updateFromSelection);
+    // Some mobile browsers fire selectionchange before the final selection geometry is ready.
+    document.addEventListener("mouseup",()=>requestAnimationFrame(updateFromSelection));
+    document.addEventListener("touchend",()=>setTimeout(updateFromSelection,80),{passive:true});
     window.addEventListener("scroll",positionFloatingHighlight,{passive:true});
     window.addEventListener("resize",positionFloatingHighlight);
   }
   function positionFloatingHighlight() {
     if(!floatingHighlight || !pendingRange)return;
     const rect=pendingRange.getBoundingClientRect();
-    if(!rect.width && !rect.height){hideFloatingHighlight();return;}
+    if(!rect.width && !rect.height){floatingHighlight.style.display="none";return;}
     floatingHighlight.style.display="inline-flex";
-    const width=floatingHighlight.offsetWidth||150, height=floatingHighlight.offsetHeight||42;
-    let left=Math.min(Math.max(8,rect.left+(rect.width-width)/2),window.innerWidth-width-8);
+    const width=floatingHighlight.offsetWidth||170, height=floatingHighlight.offsetHeight||44;
+    const left=Math.min(Math.max(8,rect.left+(rect.width-width)/2),Math.max(8,window.innerWidth-width-8));
     let top=rect.top-height-10;
     if(top<8)top=Math.min(window.innerHeight-height-8,rect.bottom+10);
     floatingHighlight.style.left=left+"px";
