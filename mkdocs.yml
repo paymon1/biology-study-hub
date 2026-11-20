@@ -63,7 +63,8 @@ extra_css:
   - assets/stylesheets/extra.css
 extra_javascript:
   - assets/javascripts/flashcards.js
-  - assets/javascripts/study-tools.js\n  - assets/javascripts/pwa.js
+  - assets/javascripts/study-tools.js
+  - assets/javascripts/pwa.js
 
 nav:
   - خانه: index.md
