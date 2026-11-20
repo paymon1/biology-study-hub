@@ -103,8 +103,12 @@
     floatingHighlight.style.display="inline-flex";
     const width=floatingHighlight.offsetWidth||170, height=floatingHighlight.offsetHeight||44;
     const left=Math.min(Math.max(8,rect.left+(rect.width-width)/2),Math.max(8,window.innerWidth-width-8));
-    let top=rect.top-height-10;
-    if(top<8)top=Math.min(window.innerHeight-height-8,rect.bottom+10);
+    // Put the action BELOW the selected passage on phones so Android's
+    // native Select/Copy toolbar (usually shown above the selection) won't cover it.
+    const viewportHeight=window.visualViewport?.height||window.innerHeight;
+    let top=rect.bottom+18;
+    // Only flip above the passage when there is genuinely no room below.
+    if(top+height>viewportHeight-8)top=Math.max(8,rect.top-height-18);
     floatingHighlight.style.left=left+"px";
     floatingHighlight.style.top=Math.max(8,top)+"px";
   }
