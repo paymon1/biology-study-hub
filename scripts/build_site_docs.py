@@ -34,7 +34,7 @@ def main():
     scripts = DEST / "assets" / "javascripts"
     scripts.mkdir(parents=True, exist_ok=True)
     copy2(ROOT / "website" / "flashcards.js", scripts / "flashcards.js")
-    copy2(ROOT / "website" / "study-tools.js", scripts / "study-tools.js")
+    copy2(ROOT / "website" / "study-tools.js", scripts / "study-tools.js")\n    copy2(ROOT / "website" / "pwa.js", scripts / "pwa.js")\n    for filename in ("manifest.webmanifest", "service-worker.js", "pwa-icon.svg"):\n        copy2(ROOT / "website" / filename, DEST / filename)
     copy2(ROOT / "website" / "index.md", DEST / "index.md")
     copy2(ROOT / "website" / "about.md", DEST / "about.md")
 
