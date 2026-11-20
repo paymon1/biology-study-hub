@@ -1,7 +1,7 @@
 (() => {
   "use strict";
   const KEY = "zy-study-workspace:v1";
-  const BASE = location.hostname === "localhost" ? "/" : "/biology-study-hub/";
+  const BASE = "/biology-study-hub/";
   const TYPES = [
     ["lesson", "درس‌نامه", "02-lesson-notes"],
     ["visual", "راهنمای دیداری", "03-visual-learning"],
