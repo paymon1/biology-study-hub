@@ -127,3 +127,7 @@ background: radial-gradient(circle at 10% 15%, rgba(255,255,255,.17), transparen
 .zy-backup-panel p{font-size:.78rem}.zy-backup-panel .zy-action{margin:.2rem .2rem .2rem 0}
 @media(max-width:800px){.zy-planner-form{grid-template-columns:1fr 1fr}.zy-planner-form button{grid-column:span 2}}
 @media(max-width:600px){.zy-dash-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.zy-filter-row{grid-template-columns:1fr}.zy-section-row{grid-template-columns:minmax(0,1fr) auto}.zy-section-row .zy-open-link{grid-column:1/-1}.zy-notebook-list{grid-template-columns:1fr}.zy-planner-form{grid-template-columns:1fr}.zy-planner-form button{grid-column:auto}.zy-page-tools{align-items:stretch}.zy-page-tools>*{max-width:100%}}
+
+/* Contextual highlight control: stays beside the selected passage */
+.zy-floating-highlight{position:fixed;z-index:9999;display:none;align-items:center;justify-content:center;padding:.62rem .95rem;border:1px solid var(--md-primary-fg-color);border-radius:999px;background:var(--md-primary-fg-color);color:#fff;box-shadow:0 5px 20px rgba(0,0,0,.22);font:inherit;font-size:.78rem;font-weight:800;white-space:nowrap;cursor:pointer;touch-action:manipulation}
+.zy-floating-highlight:focus-visible{outline:3px solid var(--md-accent-fg-color);outline-offset:3px}
