@@ -62,9 +62,11 @@ extra_css:
   - assets/stylesheets/extra.css
 extra_javascript:
   - assets/javascripts/flashcards.js
+  - assets/javascripts/study-tools.js
 
 nav:
   - خانه: index.md
+  - میز مطالعهٔ من: 07-revision/study-dashboard.md
   - کارت‌های نشان‌دار: 07-revision/saved-flashcards.md
   - پایه دهم:
       - معرفی کتاب: 01-curriculum/grade-10.md
