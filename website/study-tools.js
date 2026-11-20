@@ -56,13 +56,55 @@
     const h1=document.querySelector(".md-content h1, article h1, h1");
     if(h1) h1.insertAdjacentElement("afterend",bar); else document.querySelector("main")?.prepend(bar);
     restoreHighlights(section);
+    setupFloatingHighlight(section);
   }
   function makeId(){return "zy-"+Date.now().toString(36)+"-"+Math.random().toString(36).slice(2,8);}
-  function saveSelection(section) {
+  let floatingHighlight=null, pendingRange=null, pendingSection=null;
+  function setupFloatingHighlight(section) {
+    floatingHighlight=$("button","zy-floating-highlight","🖍 ذخیره هایلایت");
+    floatingHighlight.type="button";
+    floatingHighlight.setAttribute("aria-label","ذخیره متن انتخاب‌شده در دفترچه");
+    // Prevent the browser from clearing the text selection before the click handler runs.
+    floatingHighlight.addEventListener("mousedown",e=>e.preventDefault());
+    floatingHighlight.addEventListener("touchstart",e=>e.stopPropagation(),{passive:true});
+    floatingHighlight.addEventListener("click",()=> {
+      if(pendingRange && pendingSection) saveSelection(pendingSection,pendingRange);
+      hideFloatingHighlight();
+    });
+    document.body.append(floatingHighlight);
+    document.addEventListener("selectionchange",()=> {
+      const selection=window.getSelection();
+      if(!selection || selection.isCollapsed || !selection.rangeCount){hideFloatingHighlight();return;}
+      const range=selection.getRangeAt(0);
+      const root=document.querySelector(".md-content article")||document.querySelector("article")||document.querySelector("main");
+      if(!root || !root.contains(range.commonAncestorContainer) || !selection.toString().trim()){hideFloatingHighlight();return;}
+      pendingRange=range.cloneRange();pendingSection=section;
+      positionFloatingHighlight();
+    });
+    window.addEventListener("scroll",positionFloatingHighlight,{passive:true});
+    window.addEventListener("resize",positionFloatingHighlight);
+  }
+  function positionFloatingHighlight() {
+    if(!floatingHighlight || !pendingRange)return;
+    const rect=pendingRange.getBoundingClientRect();
+    if(!rect.width && !rect.height){hideFloatingHighlight();return;}
+    floatingHighlight.style.display="inline-flex";
+    const width=floatingHighlight.offsetWidth||150, height=floatingHighlight.offsetHeight||42;
+    let left=Math.min(Math.max(8,rect.left+(rect.width-width)/2),window.innerWidth-width-8);
+    let top=rect.top-height-10;
+    if(top<8)top=Math.min(window.innerHeight-height-8,rect.bottom+10);
+    floatingHighlight.style.left=left+"px";
+    floatingHighlight.style.top=Math.max(8,top)+"px";
+  }
+  function hideFloatingHighlight() {
+    if(floatingHighlight)floatingHighlight.style.display="none";
+    pendingRange=null;pendingSection=null;
+  }
+  function saveSelection(section, savedRange) {
     const selection=window.getSelection();
-    const quote=selection?selection.toString().trim():"";
+    const quote=savedRange ? savedRange.toString().trim() : (selection?selection.toString().trim():"");
     if(!quote){alert("اول متن موردنظرت را انتخاب کن.");return;}
-    const range=selection.getRangeAt(0).cloneRange();
+    const range=savedRange ? savedRange.cloneRange() : selection.getRangeAt(0).cloneRange();
     const note=prompt("این قسمت را با چه نکته‌ای ذخیره می‌کنی؟ (اختیاری)","");
     const d=read(), id=makeId();
     d.highlights.unshift({id,quote,note:(note||"").trim(),sectionId:section.id,url:location.pathname,created:new Date().toISOString()});
@@ -72,10 +114,11 @@
       mark.dataset.zyHighlight=id;
       mark.append(range.extractContents());
       range.insertNode(mark);
-      selection.removeAllRanges();
+      if(selection)selection.removeAllRanges();
     } catch (_) { /* The quote is safely saved even if a complex cross-element selection cannot be wrapped. */ }
     const btn=document.querySelector(".zy-action-primary");
     if(btn){btn.textContent="✓ در دفترچه ذخیره شد";setTimeout(()=>btn.textContent="🖍 ذخیره و هایلایت متن انتخاب‌شده",1800);}
+    hideFloatingHighlight();
   }
   function restoreHighlights(section) {
     const items=read().highlights.filter(x=>x.sectionId===section.id);
