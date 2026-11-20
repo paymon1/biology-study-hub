@@ -28,8 +28,8 @@
     } catch (_) { return {version:1,progress:{},notes:[],highlights:[],tasks:[]}; }
   };
   const write = x => { try { localStorage.setItem(KEY,JSON.stringify(x)); return true; } catch (_) { alert("فضای ذخیره‌سازی مرورگر در دسترس نیست. از خروجی پشتیبان استفاده کن."); return false; } };
-  const sectionForPath = path => SECTIONS.find(s => path.endsWith(s.path));
-  const absolute = path => BASE + path;
+  const sectionForPath = path => { const clean=path.replace(/\\/$/,""); return SECTIONS.find(s => clean.endsWith(s.path.replace(/\\.md$/,""))); };
+  const absolute = path => BASE + path.replace(/\\.md$/,"/");
   const safeDate = value => value ? new Date(value+"T00:00:00").toLocaleDateString("fa-IR") : "بدون تاریخ";
   const sectionLabel = id => { const s=SECTIONS.find(x=>x.id===id); return s?s.title:"بخش حذف‌شده یا نامشخص"; };
 
@@ -62,12 +62,12 @@
     const selection=window.getSelection();
     const quote=selection?selection.toString().trim():"";
     if(!quote){alert("اول متن موردنظرت را انتخاب کن.");return;}
-    const note=prompt("این قسمت را با چه نکته‌ای ذخیره می‌کنی؟ (اختیاری)",""); 
+    const range=selection.getRangeAt(0).cloneRange();
+    const note=prompt("این قسمت را با چه نکته‌ای ذخیره می‌کنی؟ (اختیاری)","");
     const d=read(), id=makeId();
     d.highlights.unshift({id,quote,note:(note||"").trim(),sectionId:section.id,url:location.pathname,created:new Date().toISOString()});
     if(!write(d))return;
     try {
-      const range=selection.getRangeAt(0);
       const mark=$("mark","zy-inline-highlight");
       mark.dataset.zyHighlight=id;
       mark.append(range.extractContents());
