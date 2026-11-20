@@ -125,6 +125,21 @@
 
 </div>
 
+<div class="zy-topline" markdown>
+## زیست‌شناسی (۳) · پایهٔ دوازدهم
+<span>فصل ۱ آمادهٔ مطالعه · ۸ فصل در برنامه</span>
+</div>
+
+<div class="grid cards zy-chapters" markdown>
+
+-   **۰۱ · مولکول‌های اطلاعاتی**
+
+    نوکلئیک‌اسیدها، همانندسازی دنا و پروتئین‌ها
+
+    [ورود به فصل ←](02-lesson-notes/grade-12/chapter-01/lesson.md)
+
+</div>
+
 <div class="zy-lower-grid" markdown>
 <div class="zy-toolkit" markdown>
 ## جعبه‌ابزار هر فصل
@@ -143,7 +158,7 @@
 [مرور سرفصل‌ها و منابع](01-curriculum/grade-11.md) · <span class="zy-status">۹ فصل آماده</span>
 
 **پایهٔ دوازدهم** · زیست‌شناسی (۳)  
-[دیدن سرفصل‌ها](01-curriculum/grade-12.md) · <span class="zy-status">محتوا در حال آماده‌سازی</span>
+[دیدن سرفصل‌ها](01-curriculum/grade-12.md) · <span class="zy-status">فصل ۱ آماده · ادامه در حال تولید</span>
 </div>
 </div>
 
