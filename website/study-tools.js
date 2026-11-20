@@ -28,8 +28,8 @@
     } catch (_) { return {version:1,progress:{},notes:[],highlights:[],tasks:[]}; }
   };
   const write = x => { try { localStorage.setItem(KEY,JSON.stringify(x)); return true; } catch (_) { alert("فضای ذخیره‌سازی مرورگر در دسترس نیست. از خروجی پشتیبان استفاده کن."); return false; } };
-  const sectionForPath = path => { const clean=path.replace(/\\/$/,""); return SECTIONS.find(s => clean.endsWith(s.path.replace(/\\.md$/,""))); };
-  const absolute = path => BASE + path.replace(/\\.md$/,"/");
+  const sectionForPath = path => { const clean=path.replace(/\/$/,""); return SECTIONS.find(s => clean.endsWith(s.path.replace(/\.md$/,""))); };
+  const absolute = path => BASE + path.replace(/\.md$/,"/");
   const safeDate = value => value ? new Date(value+"T00:00:00").toLocaleDateString("fa-IR") : "بدون تاریخ";
   const sectionLabel = id => { const s=SECTIONS.find(x=>x.id===id); return s?s.title:"بخش حذف‌شده یا نامشخص"; };
 
