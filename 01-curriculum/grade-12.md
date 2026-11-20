@@ -1,31 +1,72 @@
 # زیست‌شناسی (۳) — پایهٔ دوازدهم
 
 > **رشته:** علوم تجربی · **کد کتاب:** ۱۱۲۲۱۶  
-> **وضعیت تطبیق:** عنوان فصل‌ها از معرفی آموزشی شبکهٔ رشد و منابع آموزشی مرتبط با کتاب کد ۱۱۲۲۱۶ گردآوری شده‌اند. برای شماره صفحه، گفتارها و تغییرات احتمالی، نسخهٔ همان سال را در [chap.sch.ir](https://chap.sch.ir/) کنترل کنید.
+> **وضعیت تطبیق:** عنوان فصل‌ها بر پایهٔ معرفی آموزشی شبکهٔ رشد و منابع کتاب کد ۱۱۲۲۱۶ گردآوری شده‌اند. برای شماره صفحه، گفتارها و تغییرات احتمالی، نسخهٔ همان سال را در [chap.sch.ir](https://chap.sch.ir/) کنترل کنید.
 
-## فصل‌ها
+## محتوای آمادهٔ مطالعه
 
 <badge>هر ۸ فصل زیست‌یار آمادهٔ مطالعه‌اند</badge>
 
-| شناسه | عنوان فصل | محور کلی |
-|---|---|---|
-| 12-01 | مولکول‌های اطلاعاتی | نوکلئیک اسیدها، همانندسازی دنا، پروتئین‌ها · [بستهٔ کامل فصل](../02-lesson-notes/grade-12/chapter-01/lesson.md) |
-| 12-02 | جریان اطلاعات در یاخته | رونویسی، ترجمه و تنظیم بیان ژن · [بستهٔ کامل فصل](../02-lesson-notes/grade-12/chapter-02/lesson.md) |
-| 12-03 | انتقال اطلاعات در نسل‌ها | مفاهیم پایهٔ وراثت و انواع صفات · [بستهٔ کامل فصل](../02-lesson-notes/grade-12/chapter-03/lesson.md) |
-| 12-04 | تغییر در اطلاعات وراثتی | جهش، تغییر جمعیت‌ها و گونه‌زایی · [بستهٔ کامل فصل](../02-lesson-notes/grade-12/chapter-04/lesson.md) |
-| 12-05 | از ماده به انرژی | تنفس یاخته‌ای، چرخهٔ کربس، زنجیرهٔ انتقال الکترون و تخمیر · [بستهٔ کامل فصل](../02-lesson-notes/grade-12/chapter-05/lesson.md) |
-| 12-06 | از انرژی به ماده | واکنش‌های نوری، چرخهٔ کالوین، فتوتنفس و سازگاری C₃/C₄/CAM · [بستهٔ کامل فصل](../02-lesson-notes/grade-12/chapter-06/lesson.md) |
-| 12-07 | فناوری‌های نوین زیستی | مهندسی ژنتیک، PCR، مهندسی پروتئین و بافت، کاربردهای پزشکی و کشاورزی · [بستهٔ کامل فصل](../02-lesson-notes/grade-12/chapter-07/lesson.md) |
-| 12-08 | رفتارهای جانوران | اساس رفتار، انتخاب طبیعی و رفتار، ارتباط و زندگی گروهی · [بستهٔ کامل فصل](../02-lesson-notes/grade-12/chapter-08/lesson.md) |
+برای هر فصل، هر چهار بخش را مستقیم باز کن: درس‌نامه، راهنمای دیداری، تمرین و فلش‌کارت.
 
-## سازمان‌دهی محتوای پروژه
+<div class="grid cards zy-chapters" markdown>
 
-برای هر فصل از شناسهٔ ثابت استفاده کنید:
+-   **فصل ۱ · مولکول‌های اطلاعاتی**
 
-- درس‌نامه: `02-lesson-notes/grade-12/chapter-XX/`
-- تمرین: `04-practice-questions/grade-12/chapter-XX/`
-- فلش‌کارت: `06-flashcards/grade-12/chapter-XX/`
-- مرور: `07-revision/grade-12/chapter-XX/`
+    نوکلئیک‌اسیدها، همانندسازی دنا و پروتئین‌ها
+
+    [درس‌نامه](../02-lesson-notes/grade-12/chapter-01/lesson.md) · [راهنمای دیداری](../03-visual-learning/grade-12/chapter-01/visual-guide.md) · [تمرین](../04-practice-questions/grade-12/chapter-01/practice.md) · [فلش‌کارت](../06-flashcards/grade-12/chapter-01/flashcards.md)
+
+-   **فصل ۲ · جریان اطلاعات در یاخته**
+
+    رونویسی، ترجمه و تنظیم بیان ژن
+
+    [درس‌نامه](../02-lesson-notes/grade-12/chapter-02/lesson.md) · [راهنمای دیداری](../03-visual-learning/grade-12/chapter-02/visual-guide.md) · [تمرین](../04-practice-questions/grade-12/chapter-02/practice.md) · [فلش‌کارت](../06-flashcards/grade-12/chapter-02/flashcards.md)
+
+-   **فصل ۳ · انتقال اطلاعات در نسل‌ها**
+
+    مفاهیم پایهٔ وراثت و انواع صفات
+
+    [درس‌نامه](../02-lesson-notes/grade-12/chapter-03/lesson.md) · [راهنمای دیداری](../03-visual-learning/grade-12/chapter-03/visual-guide.md) · [تمرین](../04-practice-questions/grade-12/chapter-03/practice.md) · [فلش‌کارت](../06-flashcards/grade-12/chapter-03/flashcards.md)
+
+-   **فصل ۴ · تغییر در اطلاعات وراثتی**
+
+    جهش، تغییر جمعیت‌ها و گونه‌زایی
+
+    [درس‌نامه](../02-lesson-notes/grade-12/chapter-04/lesson.md) · [راهنمای دیداری](../03-visual-learning/grade-12/chapter-04/visual-guide.md) · [تمرین](../04-practice-questions/grade-12/chapter-04/practice.md) · [فلش‌کارت](../06-flashcards/grade-12/chapter-04/flashcards.md)
+
+-   **فصل ۵ · از ماده به انرژی**
+
+    تنفس یاخته‌ای، چرخهٔ کربس، زنجیرهٔ انتقال الکترون و تخمیر
+
+    [درس‌نامه](../02-lesson-notes/grade-12/chapter-05/lesson.md) · [راهنمای دیداری](../03-visual-learning/grade-12/chapter-05/visual-guide.md) · [تمرین](../04-practice-questions/grade-12/chapter-05/practice.md) · [فلش‌کارت](../06-flashcards/grade-12/chapter-05/flashcards.md)
+
+-   **فصل ۶ · از انرژی به ماده**
+
+    واکنش‌های نوری، چرخهٔ کالوین، فتوتنفس و سازگاری C₃/C₄/CAM
+
+    [درس‌نامه](../02-lesson-notes/grade-12/chapter-06/lesson.md) · [راهنمای دیداری](../03-visual-learning/grade-12/chapter-06/visual-guide.md) · [تمرین](../04-practice-questions/grade-12/chapter-06/practice.md) · [فلش‌کارت](../06-flashcards/grade-12/chapter-06/flashcards.md)
+
+-   **فصل ۷ · فناوری‌های نوین زیستی**
+
+    مهندسی ژنتیک، PCR، مهندسی پروتئین و بافت، کاربردهای پزشکی و کشاورزی
+
+    [درس‌نامه](../02-lesson-notes/grade-12/chapter-07/lesson.md) · [راهنمای دیداری](../03-visual-learning/grade-12/chapter-07/visual-guide.md) · [تمرین](../04-practice-questions/grade-12/chapter-07/practice.md) · [فلش‌کارت](../06-flashcards/grade-12/chapter-07/flashcards.md)
+
+-   **فصل ۸ · رفتارهای جانوران**
+
+    اساس رفتار، انتخاب طبیعی، ارتباط و زندگی گروهی
+
+    [درس‌نامه](../02-lesson-notes/grade-12/chapter-08/lesson.md) · [راهنمای دیداری](../03-visual-learning/grade-12/chapter-08/visual-guide.md) · [تمرین](../04-practice-questions/grade-12/chapter-08/practice.md) · [فلش‌کارت](../06-flashcards/grade-12/chapter-08/flashcards.md)
+
+</div>
+
+## روش استفاده از بستهٔ هر فصل
+
+۱. **درس‌نامه:** مفاهیم را بخوان و نکته‌ها و دام‌های تستی را علامت بزن.  
+۲. **راهنمای دیداری:** شکل‌ها، مسیرها و مقایسه‌ها را بدون نگاه به متن توضیح بده.  
+۳. **تمرین:** ابتدا مستقل پاسخ بده؛ سپس تحلیل گزینه‌ها و دلیل رد پاسخ‌های نادرست را بخوان.  
+۴. **فلش‌کارت:** برای بازیابی فعال و مرور فاصله‌دار استفاده کن.
 
 ## منابع و راستی‌آزمایی
 
