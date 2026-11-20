@@ -1,7 +1,8 @@
 (() => {
   "use strict";
   const STORAGE_KEY = "biology-study-hub:saved-flashcards:v1";
-  const REVIEW_PATH = "/biology-study-hub/07-revision/saved-flashcards/";
+  const BASE_PATH = location.hostname === "localhost" ? "/" : "/biology-study-hub/";
+  const REVIEW_PATH = BASE_PATH + "07-revision/saved-flashcards/";
   const readSaved = () => {
     try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); }
     catch (_) { return {}; }
