@@ -62,6 +62,69 @@
 
 </div>
 
+<div class="zy-topline" markdown>
+## زیست‌شناسی (۲) · پایهٔ یازدهم
+<span>هر ۹ فصل آمادهٔ مطالعه</span>
+</div>
+
+<div class="grid cards zy-chapters" markdown>
+
+-   **۰۱ · تنظیم عصبی**
+
+    یاخته‌های عصبی و ساختار دستگاه عصبی
+
+    [ورود به فصل ←](02-lesson-notes/grade-11/chapter-01/lesson.md)
+
+-   **۰۲ · حواس**
+
+    گیرنده‌های حسی و حواس ویژه
+
+    [ورود به فصل ←](02-lesson-notes/grade-11/chapter-02/lesson.md)
+
+-   **۰۳ · دستگاه حرکتی**
+
+    استخوان‌ها، اسکلت، ماهیچه و حرکت
+
+    [ورود به فصل ←](02-lesson-notes/grade-11/chapter-03/lesson.md)
+
+-   **۰۴ · تنظیم شیمیایی**
+
+    ارتباط شیمیایی و غده‌های درون‌ریز
+
+    [ورود به فصل ←](02-lesson-notes/grade-11/chapter-04/lesson.md)
+
+-   **۰۵ · ایمنی**
+
+    دفاع‌های بدن و پاسخ اختصاصی
+
+    [ورود به فصل ←](02-lesson-notes/grade-11/chapter-05/lesson.md)
+
+-   **۰۶ · تقسیم یاخته**
+
+    کروموزوم، میتوز و میوز
+
+    [ورود به فصل ←](02-lesson-notes/grade-11/chapter-06/lesson.md)
+
+-   **۰۷ · تولیدمثل**
+
+    تولیدمثل در انسان و جانوران
+
+    [ورود به فصل ←](02-lesson-notes/grade-11/chapter-07/lesson.md)
+
+-   **۰۸ · تولیدمثل نهان‌دانگان**
+
+    تولیدمثل جنسی و غیرجنسی در گیاهان گل‌دار
+
+    [ورود به فصل ←](02-lesson-notes/grade-11/chapter-08/lesson.md)
+
+-   **۰۹ · پاسخ گیاهان به محرک‌ها**
+
+    تنظیم‌کننده‌های رشد و پاسخ به محیط
+
+    [ورود به فصل ←](02-lesson-notes/grade-11/chapter-09/lesson.md)
+
+</div>
+
 <div class="zy-lower-grid" markdown>
 <div class="zy-toolkit" markdown>
 ## جعبه‌ابزار هر فصل
@@ -77,7 +140,7 @@
 ## پایه‌های دیگر
 
 **پایهٔ یازدهم** · زیست‌شناسی (۲)  
-[دیدن سرفصل‌ها](01-curriculum/grade-11.md) · <span class="zy-status">محتوا در حال آماده‌سازی</span>
+[مرور سرفصل‌ها و منابع](01-curriculum/grade-11.md) · <span class="zy-status">۹ فصل آماده</span>
 
 **پایهٔ دوازدهم** · زیست‌شناسی (۳)  
 [دیدن سرفصل‌ها](01-curriculum/grade-12.md) · <span class="zy-status">محتوا در حال آماده‌سازی</span>
