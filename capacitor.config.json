@@ -1,9 +1,0 @@
-{
-  "appId": "com.paymon1.zistyar",
-  "appName": "زیست‌یار",
-  "webDir": "www",
-  "bundledWebRuntime": false,
-  "server": {
-    "androidScheme": "https"
-  }
-}
