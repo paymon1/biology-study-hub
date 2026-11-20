@@ -1,0 +1,95 @@
+name: Build Zistyar Android app
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "00-study-guides/**"
+      - "01-curriculum/**"
+      - "02-lesson-notes/**"
+      - "03-visual-learning/**"
+      - "04-practice-questions/**"
+      - "05-exam-archives/**"
+      - "06-flashcards/**"
+      - "07-revision/**"
+      - "08-advanced-topics/**"
+      - "09-study-plans/**"
+      - "10-curated-resources/**"
+      - "website/**"
+      - "scripts/build_site_docs.py"
+      - "mkdocs.yml"
+      - "requirements-site.txt"
+      - "package.json"
+      - "capacitor.config.json"
+      - ".github/workflows/build-android.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: zistyar-android
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-site.txt
+
+      - name: Set up Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install JavaScript dependencies
+        run: npm install
+
+      - name: Install site dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-site.txt
+
+      - name: Build the complete offline website
+        run: npm run build:web
+
+      - name: Generate Android project
+        run: npx cap add android
+
+      - name: Sync web assets into Android
+        run: npx cap sync android
+
+      - name: Build debug APK and release AAB
+        working-directory: android
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug bundleRelease
+
+      - name: Upload Android build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: zistyar-android-${{ github.sha }}
+          if-no-files-found: error
+          path: |
+            android/app/build/outputs/apk/debug/app-debug.apk
+            android/app/build/outputs/bundle/release/app-release.aab
+          retention-days: 30
