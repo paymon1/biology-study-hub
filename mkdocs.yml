@@ -65,6 +65,7 @@ extra_javascript:
   - assets/javascripts/flashcards.js
   - assets/javascripts/study-tools.js
   - assets/javascripts/pwa.js
+  - assets/javascripts/bidi-fix.js
 
 nav:
   - خانه: index.md
