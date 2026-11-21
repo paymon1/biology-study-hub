@@ -36,6 +36,7 @@ def main():
     copy2(ROOT / "website" / "flashcards.js", scripts / "flashcards.js")
     copy2(ROOT / "website" / "study-tools.js", scripts / "study-tools.js")
     copy2(ROOT / "website" / "pwa.js", scripts / "pwa.js")
+    copy2(ROOT / "website" / "bidi-fix.js", scripts / "bidi-fix.js")
     for filename in ("manifest.webmanifest", "service-worker.js", "pwa-icon.svg"):
         copy2(ROOT / "website" / filename, DEST / filename)
     copy2(ROOT / "website" / "index.md", DEST / "index.md")
