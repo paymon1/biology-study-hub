@@ -1,6 +1,6 @@
 (() => {
 "use strict";
-const pattern=/(?:[0-9۰-۹٠-٩]+(?:[\\s\\u00a0]+[A-Za-z]+[0-9₀-₉]*)?|[A-Za-z]+[0-9₀-₉]*|[0-9]+(?:\\.[0-9]+)?)/g;
+const pattern=/(?:[0-9۰-۹٠-٩]+[\\s\\u00a0]*[A-Za-z]+[A-Za-z0-9۰-۹٠-٩₀-₉]*|[A-Za-z]+[A-Za-z0-9₀-₉]*(?:[\\s\\u00a0]*[0-9۰-۹٠-٩]+)?|[0-9]+(?:\\.[0-9]+)?)/g;
 const skip="SCRIPT,STYLE,PRE,CODE,TEXTAREA,INPUT,BUTTON,SVG,MATH";
 function isolate(node){const text=node.nodeValue;pattern.lastIndex=0;if(!pattern.test(text)){pattern.lastIndex=0;return;}pattern.lastIndex=0;const frag=document.createDocumentFragment();let last=0,m;while((m=pattern.exec(text)){if(m.index>last)frag.append(document.createTextNode(text.slice(last,m.index)));const b=document.createElement("bdi");b.className="zy-bidi-isolate";b.dir="ltr";b.textContent=m[0];frag.append(b);last=pattern.lastIndex;}if(last<text.length)frag.append(document.createTextNode(text.slice(last)));node.parentNode.replaceChild(frag,node);}
 function run(){const root=document.querySelector(".md-content__inner");if(!root||root.dataset.zyBidiDone)return;root.dataset.zyBidiDone="1";const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode(n){if(!n.nodeValue||!/[A-Za-z0-9۰-۹٠-٩]/.test(n.nodeValue))return NodeFilter.FILTER_REJECT;if(n.parentElement?.closest(skip+", .zy-bidi-isolate, .zy-inline-highlight"))return NodeFilter.FILTER_REJECT;return NodeFilter.FILTER_ACCEPT;}});const nodes=[];while(w.nextNode())nodes.push(w.currentNode);nodes.forEach(isolate);}
